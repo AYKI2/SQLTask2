@@ -1,0 +1,18 @@
+SELECT CustomerName,City FROM [Customers]
+SELECT DISTINCT Country FROM [Customers]
+SELECT DISTINCT Country,count(*) FROM [Customers] GROUP BY Country;
+SELECT CustomerName,Country FROM [Customers] WHERE Country = 'Mexico'
+SELECT CustomerID,CustomerName,City,Address FROM [Customers] WHERE CustomerID = 1
+SELECT CustomerName,Country FROM [Customers] WHERE Country = 'Spain' OR Country = 'Germany'
+SELECT ContactName,Country FROM [Customers] ORDER BY Country
+SELECT ContactName,Country FROM [Customers] ORDER BY ContactName desc
+SELECT * FROM [Customers] WHERE Address = 'null'
+SELECT MIN(Price) FROM [Products]
+SELECT count(*) FROM [Products]
+SELECT * FROM [Customers] WHERE ContactName LIKE 'A%'
+SELECT *,Country FROM [Customers] WHERE Country = 'Germany' OR Country = 'France' OR Country = 'UK'
+13{
+SELECT * FROM Customers,Suppliers WHERE Customers.Country = Suppliers.Country
+SELECT c.CustomerId,c.CustomerName,c.Country,s.SupplierId,s.SupplierName,s.Country  FROM Customers AS c,Suppliers AS s WHERE c.Country = s.Country
+}
+SELECT * FROM [Orders] WHERE OrderDate BETWEEN '1996-01-01' AND '1996-12-31'
